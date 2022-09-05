@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --prmy-clr: rgb(156, 29, 156); 
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100vw;
+    height: 100vh;
+}
+.loginSection{
+    background-color: rgb(240, 240, 240);
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginSectionContainer{
+    max-width: 30vw;
+}
+.title-discription{
+    margin-bottom: 3rem;
+}
+.loginPageHeading{
+    font-size: 1.8rem;
+    margin-bottom: .7rem;
+}
+.loginPageDescription{
+    font-size: .8rem;
+    line-height: 1.2rem;
+    color: rgba(0, 0, 0, 0.703);
+}
+.formContent{
+    position: relative;
+}
+.inputDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.inputFields{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.inputFields input{
+    border: none;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 18rem;
+    font-size: 1rem;
+}
+.inputDetailsTitle{
+    font-size: .9rem;
+    font-weight: 600;
+}
+.loginhr{
+    margin: 1.3rem 0 1.3rem 0;
+    background: transparent;
+    height: 1px;
+    border: none;
+    border-top: 1px solid rgb(148, 148, 148);
+}
+
+.forgotPassCnt{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: right;
+}
+.loginBtnCnt{
+    display: flex;
+    justify-content: center;
+}
+.loginBtn{
+    padding: 8px 22px 8px 22px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: var(--prmy-clr);
+    margin-bottom: 1rem;
+}
+.forgotPassCnt span{
+    color: var(--prmy-clr);
+    font-size: .9rem;
+}
+.createAcTxt button{
+    text-decoration: none;
+    color: var(--prmy-clr);
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+}
+.createAc{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.loginRight{
+    background-image: url(assets/login-page-bg.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+.inputFields .different{
+    outline: 2px solid red;
+}
+.errorCon{
+    display: none;
+    --width: 10rem;
+    width: var(--width);
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: calc(0rem - var(--width));
+    top: -25%;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+#loginErrorCon{
+    display: none;
+    position: absolute;
+    padding: 10px 1rem;
+    color: white;
+    background-color: red;
+    border-radius: .5rem;
+    top: -3rem;
+}
