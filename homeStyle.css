@@ -1,0 +1,174 @@
+:root{
+    --prmy-clr: rgb(123, 16, 123); 
+    --insert-panel-width: 20vw;
+    --bdr-rad: 1.5rem;
+}
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(231, 231, 231);
+    font-family: 'Poppins', sans-serif;
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto .3fr .3fr 1fr;
+    grid-template-areas: 
+        '... ...    two'
+        '... one    two'
+        '... three  two'
+        '... four   two';
+    gap: 2rem;
+    margin-right:20vw;
+}
+.adTileCnt{
+    background-image: url(assets/adv-tile-bg.jpg);
+    color: white;
+    grid-area: one;
+    border-radius: var(--bdr-rad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adTileContent{
+    width:50%;
+}
+.adTileContent p{
+    margin-bottom: 0px;
+}
+.adTileContent a{
+    margin-top: .5rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.adTileContent a div{
+    display: flex;
+    color: var(--prmy-clr);
+    align-items: center;
+}
+.highlightsCnt{
+    display: flex;
+    gap: 2rem;
+    grid-area: three;
+}
+.highlightsCnt .higestTotalMarkCnt{
+    flex: 1;
+    background-color: white;
+    border-radius: var(--bdr-rad);
+    overflow: hidden;
+}
+.higestTotalMarkCnt{
+    background-color: lightblue;
+    display: flex;
+}
+.higestTotalMarkCnt .tileContent{
+    padding-top: 1rem; 
+    color: rgb(47, 47, 47);
+}
+.tileContent{
+    flex: 1;
+}
+.winner{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 2rem;
+}
+.winner .winnerName{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.winner .winnerScore{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.tileLogo{
+    width: 5.5rem;
+}
+.highlightsCnt .logoImg{
+    --length: 5.5rem;
+    width: var(--length);
+    height: var(--length);
+}
+#higestTotalMark .title{
+    font-size: .7rem;
+}
+
+
+.chartCnt{
+    grid-area: four;
+    background-color: white;
+    border-radius: var(--bdr-rad);
+    padding: 1rem;
+}
+
+
+
+.collectorCnt{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: transform .5s ease-in;
+    overflow-y:scroll;
+    grid-area: two;
+}
+.collectorCnt::-webkit-scrollbar {
+    display: none;
+}
+.insertion{
+    background-color: hsl(0 0%  100% / 0.5);
+    
+    position: relative;
+    width: var(--insert-panel-width);
+    padding: 5rem 2rem;
+    
+    color: black;
+}
+
+
+.insertionHeading{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.insertTitle{
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.961);
+}
+.insertField{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+}
+.insertField input{
+    border: none;
+    outline: none;  
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.582);
+    font-size: 1.3rem;
+}
+.markTitle{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.insertBtn{
+    padding: .5rem 1rem;
+    background-color: var(--prmy-clr);
+    border-radius: 5px;
+    border:none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.insertionClose{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.insertionCloseBtn{
+    border: none;
+    background-color: transparent;
+}
